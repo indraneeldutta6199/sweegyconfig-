@@ -1,0 +1,30 @@
+server:
+  port: 4567 #port of Application
+spring:
+  application:
+    name: SagarRatan  #name of application
+  datasource:
+    url: jdbc:mysql://localhost:3306/sagar_ratan
+    username: root
+    password: root 
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      dialect: org.hibernate.dialect.MySQL5Dialect
+      
+    
+eureka:
+  client:
+    register-with-eureka: true # not registered with eureka
+    fetch-registry: true  # application will cached
+    service-url:
+      defaultZone: http://localhost:1234/eureka # where ur app is running
+  instance:
+    hostname: localhost # current machine
+
+
+
+    
